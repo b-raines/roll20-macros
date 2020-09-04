@@ -1,0 +1,61 @@
+# Ability Checks
+@{wtype}&{template:default} {{name=Ability Score for @{character_name}}} {{?{Ability Score
+  | Strength, Strength +@{strength_mod}@{jack_bonus}=[[@{d20}+@{strength_mod}@{jack_bonus}]] - [[@{d20}+@{strength_mod}@{jack_bonus}]]
+  | Dexterity, Dexterity +@{dexterity_mod}@{jack_bonus}=[[@{d20}+@{dexterity_mod}@{jack_bonus}]] - [[@{d20}+@{dexterity_mod}@{jack_bonus}]]
+  | Constitution, Constitution +@{constitution_mod}@{jack_bonus}=[[@{d20}+@{constitution_mod}@{jack_bonus}]] - [[@{d20}+@{constitution_mod}@{jack_bonus}]]
+  | Intelligence, Intelligence +@{intelligence_mod}@{jack_bonus}=[[@{d20}+@{intelligence_mod}@{jack_bonus}]] - [[@{d20}+@{intelligence_mod}@{jack_bonus}]]
+  | Wisdom, Wisdom +@{wisdom_mod}@{jack_bonus}=[[@{d20}+@{wisdom_mod}@{jack_bonus}]] - [[@{d20}+@{wisdom_mod}@{jack_bonus}]]
+  | Charisma, Charisma +@{charisma_mod}@{jack_bonus}=[[@{d20}+@{charisma_mod}@{jack_bonus}]] - [[@{d20}+@{charisma_mod}@{jack_bonus}]]
+}}}
+
+# Skill Checks
+@{wtype}&{template:default} {{name=Skill Check for @{character_name}}} {{?{Skill
+  | Acrobatics, Acrobatics = [[@{d20}+@{acrobatics_bonus}@{pbd_safe}]] - [[@{d20}+@{acrobatics_bonus}@{pbd_safe}]]
+  | Animal Handling, Animal Handling = [[@{d20}+@{animal_handling_bonus}@{pbd_safe}]] - [[@{d20}+@{animal_handling_bonus}@{pbd_safe}]]
+  | Arcana, Arcana = [[@{d20}+@{arcana_bonus}@{pbd_safe}]] - [[@{d20}+@{arcana_bonus}@{pbd_safe}]]
+  | Athletics, Athletics = [[@{d20}+@{athletics_bonus}@{pbd_safe}]] - [[@{d20}+@{athletics_bonus}@{pbd_safe}]]
+  | Deception, Deception = [[@{d20}+@{deception_bonus}@{pbd_safe}]] - [[@{d20}+@{deception_bonus}@{pbd_safe}]]
+  | History, History = [[@{d20}+@{history_bonus}@{pbd_safe}]] - [[@{d20}+@{history_bonus}@{pbd_safe}]]
+  | Insight, Insight = [[@{d20}+@{insight_bonus}@{pbd_safe}]] - [[@{d20}+@{insight_bonus}@{pbd_safe}]]
+  | Intimidation, Intimidation = [[@{d20}+@{intimidation_bonus}@{pbd_safe}]] - [[@{d20}+@{intimidation_bonus}@{pbd_safe}]]
+  | Investigation, Investigation = [[@{d20}+@{investigation_bonus}@{pbd_safe}]] - [[@{d20}+@{investigation_bonus}@{pbd_safe}]]
+  | Medicine, Medicine = [[@{d20}+@{medicine_bonus}@{pbd_safe}]] - [[@{d20}+@{medicine_bonus}@{pbd_safe}]]
+  | Nature, Nature = [[@{d20}+@{nature_bonus}@{pbd_safe}]] - [[@{d20}+@{nature_bonus}@{pbd_safe}]]
+  | Perception, Perception = [[@{d20}+@{perception_bonus}@{pbd_safe}]] - [[@{d20}+@{perception_bonus}@{pbd_safe}]]
+  | Performance, Performance = [[@{d20}+@{performance_bonus}@{pbd_safe}]] - [[@{d20}+@{performance_bonus}@{pbd_safe}]]
+  | Persuasion, Persuasion = [[@{d20}+@{persuasion_bonus}@{pbd_safe}]] - [[@{d20}+@{persuasion_bonus}@{pbd_safe}]]
+  | Religion, Religion = [[@{d20}+@{religion_bonus}@{pbd_safe}]] - [[@{d20}+@{religion_bonus}@{pbd_safe}]]
+  | Sleight of Hand, Sleight of Hand = [[@{d20}+@{sleight_of_hand_bonus}@{pbd_safe}]] - [[@{d20}+@{sleight_of_hand_bonus}@{pbd_safe}]]
+  | Stealth, Stealth = [[@{d20}+@{stealth_bonus}@{pbd_safe}]] - [[@{d20}+@{stealth_bonus}@{pbd_safe}]]
+  | Survival, Survival = [[@{d20}+@{survival_bonus}@{pbd_safe}]] - [[@{d20}+@{survival_bonus}@{pbd_safe}]]
+}}}
+
+
+# Saving Throws
+@{wtype}&{template:default} {{name=Saving Throw for @{character_name}}} {{?{Saving Throw
+  | Strength, Strength= [[@{d20}+[[(@{strength_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_str_save}*@{npc})]]]] - [[@{d20}+[[(@{strength_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_str_save}*@{npc})]]]]
+  | Dexterity, Dexterity= [[@{d20}+[[(@{dexterity_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_dex_save}*@{npc})]]]] - [[@{d20}+[[(@{dexterity_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_dex_save}*@{npc})]]]]
+  | Constitution, Constitution= [[@{d20}+[[(@{constitution_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_con_save}*@{npc})]]]] - [[@{d20}+[[(@{constitution_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_con_save}*@{npc})]]]]
+  | Intelligence, Intelligence= [[@{d20}+[[(@{intelligence_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_int_save}*@{npc})]]]] - [[@{d20}+[[(@{intelligence_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_int_save}*@{npc})]]]]
+  | Wisdom, Wisdom= [[@{d20}+[[(@{wisdom_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_wis_save}*@{npc})]]]] - [[@{d20}+[[(@{wisdom_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_wis_save}*@{npc})]]]]
+  | Charisma, Charisma= [[@{d20}+[[(@{charisma_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_cha_save}*@{npc})]]]] - [[@{d20}+[[(@{charisma_save_bonus}@{pbd_safe}*(1-ceil((@{npc})*0.1)))+(@{npc_cha_save}*@{npc})]]]]
+}}}
+
+# Spellcasting
+# You'll need to manually add/remove spells/cantrips relative to the number of cantrips L1/L2/etc spells you have
+# With a custom script, this could be automated by looping over repeating lists, but isn't possible w/ only macros
+&{template:default}{{name=@{character_name} Spellcasting
+}}{{ Spell DC @{spell_save_dc} = @{spell_attack_bonus} to hit with spell attacks
+}}{{ Cantrips =
+  [@{repeating_spell-cantrip_$0_spellname}](~repeating_spell-cantrip_$0_spell)
+  [@{repeating_spell-cantrip_$1_spellname}](~repeating_spell-cantrip_$1_spell)
+  [@{repeating_spell-cantrip_$2_spellname}](~repeating_spell-cantrip_$2_spell)
+}}{{ 1st ([[@{lvl1_slots_total}-@{lvl1_slots_expended}]]/@{lvl1_slots_total}) spell slots =
+  [@{repeating_spell-1_$0_spellname}](~repeating_spell-1_$0_spell)
+  [@{repeating_spell-1_$1_spellname}](~repeating_spell-1_$1_spell)
+  [@{repeating_spell-1_$2_spellname}](~repeating_spell-1_$2_spell)
+  [@{repeating_spell-1_$3_spellname}](~repeating_spell-1_$3_spell)
+  [@{repeating_spell-1_$4_spellname}](~repeating_spell-1_$4_spell)
+  [@{repeating_spell-1_$5_spellname}](~repeating_spell-1_$5_spell)
+}}
+
